@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reseaux</title>
+    <style>
+        #trait-gauche {
+            height: 60px;
+            background-color: #F3BB00;
+            width: 2px;
+        }
+
+        div.logos img {
+            width: 50px;
+            height: auto;
+            margin-left: 20px;
+        }
+
+        div.container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: 576px) {
+            div.logos img {
+                width: 40px;
+                height: auto;
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="trait-gauche"></div>
+        <div class="logos">
+            <a href="https://wa.me/+33627606087"><img src="img/whatsapp.png" alt=""></a>
+            <a href="https://facebook.com"><img src="img/facebook.png" alt=""></a>
+            <a href="https://linkedin.com"><img src="img/linkedin.png" alt=""></a>
+            <a href="mailto:lassenimalle2@gmail.com"><img src="img/gmail.png" alt=""></a>
+        </div>
+    </div>
+</body>
+
+</html>

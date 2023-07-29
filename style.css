@@ -1,0 +1,593 @@
+:root{
+    --blue-fonced: #0B162C;
+    --main-bg: #8BA503;
+    --the-red: #BD3100;
+    --my-grey: #4B4948;
+    --color-trait: #F3BB00;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-wrap: break-word;
+}
+
+html{
+    margin: auto;
+}
+
+.entouree{
+    border: 4px solid var(--color-trait);
+    border-radius: 50%;
+    padding: 8px;
+}
+
+
+body{
+    margin: 5vh 0;
+    display: flex;
+    padding: 0 20px 0 0;
+    background-color: var(--color-trait);
+    height: 90vh;
+    color: #fff;
+    width: 100vw;
+}
+
+
+nav{
+    margin: 0;
+    background-color: var(--blue-fonced);
+    margin-right: 20px;
+    border-radius: 0 20px 20px 0;
+}
+
+nav ul{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+
+.icon-menu{
+    width: 100px;
+}
+
+.nav-link{
+    list-style: none;
+}
+
+.menu ul{
+    animation: menu-ul;
+    animation-duration: .500s;
+    animation-iteration-count: 3;
+}
+
+@keyframes menu-ul{
+    from{
+        transform: translate(0, -20px);
+    }
+    to{
+        transform: translate(0, 0);
+    }
+}
+
+main{
+    background-color: var(--blue-fonced);
+    height: 90vh;
+    flex-grow: 1;
+    overflow: auto;
+    border-radius: 20px;
+}
+
+section{
+    display: none;
+    padding: 20px;
+}
+
+section.voir{
+    display: block;
+}
+#acceuil{
+    height: 100%;
+}
+
+@keyframes accueil {
+    from{
+        transform: scale(0, 0);
+    }
+    to{
+        transform: scale(1, 1);
+    }
+}
+
+.container > *{
+    padding: 20px;
+}
+
+.container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+figure#ma-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 20px;
+
+    animation: accueil;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    position: relative;
+}
+
+figure#ma-photo{
+    width: 50%;
+    height: 100%;
+    margin: 0;
+}
+
+.mon-nom h1{
+    margin: 0;
+}
+span#prenom-red{
+    color: var(--the-red);
+}
+.trait-jaune{
+    width: 100px;
+    height: 2px;
+    background-color: var(--color-trait);
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+
+    animation-name: acceuil-info;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes acceuil-info{
+    from{
+        transform: translate(0, -120%);
+    }
+    to{
+        transform: translate(0, 0);
+    }
+}
+
+div.mon-nom{
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.grey-txt{
+    color: var(--my-grey);
+    font-size: 1.5em;
+    font-weight: bold;
+    max-width: 500px;
+    text-align: center;
+}
+.black-text{
+    color: var(--main-bg);
+    font-size: larger;
+}
+#acceuil .infos > p:last-child a, h1#download-cv a{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#acceuil .infos > p:last-child{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#acceuil .infos > p:last-child a:first-child, input[type="submit"]{
+    background-color: var(--color-trait);
+    color: var(--the-red);
+    margin: 5px;
+}
+#acceuil .infos > p:last-child a:last-child{
+    background-color: var(--the-red);
+    color: var(--color-trait);
+    margin: 5px;
+}
+
+
+/* SECTION A PROPOS DE MOI */
+.title-section{
+    color: #fff;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2em;
+    margin: 0;
+}
+.title-section span{
+    color: var(--main-bg);
+    text-decoration: inherit;
+}
+#a-propos .infos{
+    width: 50%;
+    align-self: center;
+    animation: a-propos-anim;
+    animation-duration: 1s;
+}
+#a-propos figure.figure img{
+    height: 100%;
+    animation: a-propos-img-anim;
+    animation-duration: 1s;
+}
+#a-propos figure.figure{
+    height: 80vb;
+}
+@keyframes a-propos-anim {
+    to{
+        transform: translateX(0);
+    }
+    from{
+        transform: translateX(50%);
+    }
+}
+
+@keyframes a-propos-img-anim {
+    to{
+        width: 100%;
+    }
+    from{
+        width: 50px;
+    }
+    
+}
+
+#a-propos .container{
+    align-items: flex-start;
+    padding-top: 20px;
+}
+.sections .contenu{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.partie-1, .partie-2{
+    width: 50%;
+    padding: 20px;
+}
+
+.info{
+    color: var(--my-grey);
+}
+.info .info-red{
+    color: var(--the-red);
+}
+.info .info-white{
+    color: #fff;
+}
+.info .info-yellow{
+    color: var(--color-trait);
+}
+.info a{
+    color: inherit;
+}
+
+div.une-col *{
+    margin: 0;
+}
+
+div.une-col .title{
+    text-decoration: underline;
+    font-size: 20px;
+    color: var(--blue-fonced);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.une-col .body{
+    font-size: 16px;
+    padding-top: 5px;
+    color: var(--my-grey);
+    font-weight: bold;
+}
+
+div.une-col{
+    width: 100%;
+    background-color: var(--main-bg);
+    border-radius: 10px;
+    padding: 2px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+h1#download-cv a{
+    background-color: var(--color-trait);
+    color: var(--the-red);
+}
+
+h1#download-cv a:hover{
+    background-color: var(--blue-fonced);
+    border: 2px solid var(--the-red);
+    transition: 1s;
+}
+
+h1#download-cv{
+    text-align: center;
+}
+
+.figure img{
+    opacity: 50%;
+}
+
+.une-form{
+    width: 300px;
+}
+.une-form h1{
+    text-align: center;
+    margin: 0;
+}
+
+.une-form .une-col .title{
+    text-decoration: none;
+    border-bottom: 1px solid var(--blue-fonced) ;
+}
+
+.une-form .une-col svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.une-form .une-col{
+    background-color: var(--color-trait);
+    position: relative;
+}
+
+.les-formations{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.les-formations > *{
+    margin-right: 10px;
+}
+
+.date{
+    color: var(--main-bg);
+}
+
+.container > .send-mail, .container > .contact-info{
+    width: 50%;
+    align-self: flex-start;
+}
+
+.group-nom{
+    display: flex;
+}
+
+.group-nom *{
+    width: 50%;
+}
+
+input[type='email']{
+    width: 100%;
+}
+
+.en{
+    width: 40px;
+}
+
+input[type="email"], textarea, input[type="text"]{
+    outline: none;
+    margin: 5px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 2px solid var(--main-bg);
+    padding: 5px;
+}
+
+input[type="email"]{
+    color: var(--blue-fonced);
+    text-decoration: underline;
+}
+input[type="submit"]{
+    cursor: pointer;
+    border: 0;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+input[type="submit"]:hover{
+    background-color: var(--blue-fonced);
+    border: 2px solid var(--color-trait);
+    color: var(--color-trait);
+    transition: .5s;
+}
+#contact .send-mail{
+    animation-name: contact-form;
+    animation-duration: 1s;
+}
+
+#contact .contact-info{
+    animation-name: contact-info;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes contact-info{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes contact-form{
+    from{
+        transform: translateX(-100%);
+    }
+}
+.scroll{
+    display: none;
+}
+
+div#profil{
+    width: 100px;
+    height: auto;
+    margin: 20px auto 0 auto;
+}
+
+.defile-non-visible{
+    transform: translateY(-30px);
+    opacity: 0;
+    animation-name: defilement;
+    animation-duration: 1s;
+}
+
+.defile-visible{
+    transition: 1s;
+    animation-name: defilement;
+    animation-duration: 1s;
+}
+
+@keyframes defilement{
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    nav ul{
+        flex-direction: row;
+        list-style: none;
+    }
+    li.nav-item{
+        height: 50px;
+    }
+    .icon-menu{
+        width: 50px;
+    }
+    nav.menu{
+        margin-bottom: 0;
+    }
+    nav{
+        border-radius: 20px;
+        margin-right: 0;
+        margin-bottom: 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    main{
+        height: 100%;
+        flex-grow: 1;
+        overflow: auto;
+        border-radius: 20px;
+        width: 90%;
+        margin: 20px auto;
+        height: 85vb;
+    }
+
+    .container{
+        display: block;
+    }
+
+    .scroll{
+        display: block;
+    }
+
+    figure#ma-photo{
+        width: 100%;
+        height: 90%;
+        margin: 0;
+        padding: 0;
+    }
+    .infos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+    @keyframes acceuil-info{
+        from{
+            transform: translateY(100%);
+        }
+        to{
+            transform: translateY(0);
+        }
+    }
+
+    #a-propos .infos{
+        width: 100%;
+        align-self: center;
+        animation: a-propos-anim;
+        animation-duration: 1s;
+    }
+    #a-propos figure.figure{
+        height: 30vb;
+    }
+
+    div.mon-nom h1{
+        font-size: 1.2em;
+    }
+
+    .sections .contenu{
+        align-self: center;
+        flex-direction: column;
+    }
+    
+    .partie-1, .partie-2{
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .info{
+        text-align: center;
+    }
+
+    .container > .send-mail, .container > .contact-info{
+        width: 100%;
+        align-self: flex-start;
+    }
+
+    .une-form{
+        margin: 0;
+    }
+    #acceuil .infos > p:last-child{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    #acceuil .infos > p:last-child a{
+        font-size: 16px;
+    }
+}
