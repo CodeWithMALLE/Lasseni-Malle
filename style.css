@@ -506,13 +506,12 @@ div#profil{
         box-sizing: border-box;
     }
     body{
-        height: 100%;
+        min-height: 100vh;
         margin: 0;
         width: 100%;
         padding: 0;
         flex-direction: column-reverse;
         justify-content: space-between;
-        position: relative;
     }
     nav ul{
         flex-direction: row;
@@ -526,8 +525,8 @@ div#profil{
         margin: 0;
 
     }
-    nav.menu{
-        margin-bottom: 0;
+    nav ul{
+        margin: 0;
     }
 
     nav{
@@ -536,15 +535,13 @@ div#profil{
         margin-bottom: 0;
         margin-left: 0;
         width: 100%;
-        position: absolute;
-        bottom: -95px;
     }
     main{
         flex-grow: 1;
         overflow: auto;
         border-radius: 20px;
         width: 95%;
-        margin: 0 auto;
+        margin: 2% auto;
         position: relative;
     }
 
