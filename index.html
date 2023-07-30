@@ -4,9 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lasseni MALLE | Etudiant comptable</title>
+    <title>Lasseni MALLE | Futur Expert Comptable</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <style>
+        #trait-gauche {
+            height: 60px;
+            background-color: #F3BB00;
+            width: 2px;
+        }
+
+        div.logos img {
+            width: 50px;
+            height: auto;
+            margin-left: 20px;
+        }
+
+        div.reseaux {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: 576px) {
+            div.logos img {
+                width: 40px;
+                height: auto;
+                margin-left: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -30,8 +57,8 @@
             </li>
         </ul>
     </nav>
-
     <main>
+        <div class="tell"></div>
         <section id="acceuil" class="section voir">
             <div class="container">
                 <figure id="ma-photo" class="figure">
@@ -48,7 +75,15 @@
                     <h2>
                         Mon seul et unique but est de dévenir <span class="black-text">EXPERT COMPTABLE</span>.
                     </h2>
-                    <iframe style="width: 100%; align-self: center;" src="reseaux.html" frameborder="0"></iframe>
+                    <div class="reseaux">
+                        <div id="trait-gauche"></div>
+                        <div class="logos">
+                            <a href="https://wa.me/+33627606087"><img src="img/whatsapp.png" alt=""></a>
+                            <a href="https://facebook.com"><img src="img/facebook.png" alt=""></a>
+                            <a href="https://linkedin.com"><img src="img/linkedin.png" alt=""></a>
+                            <a href="mailto:lassenimalle2@gmail.com"><img src="img/gmail.png" alt=""></a>
+                        </div>
+                    </div>
                     <p>
                         <a href="#contact" id="btn-engager">Engagez-moi</a>
                         <a href="#a-propos" id="btn-a-propos">A propos de moi</a>
@@ -60,7 +95,7 @@
             <h1 class="title-section">A Propos de <span class="red-text">Moi</span></h1>
             <div class="container">
                 <figure id="ma-photo" class="figure">
-                    <img src="img/il-code.avif" alt="">
+                    <img src="/img/il-code.avif" alt="">
                 </figure>
                 <div class="infos">
                     <h1 style="color: var(--my-grey); align-self: flex-start; margin: 0;">Qui suis je ?</h1>

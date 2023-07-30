@@ -257,6 +257,25 @@ div.mon-nom{
     align-items: flex-start;
     padding-top: 20px;
 }
+
+
+.infos-perso{
+    animation-name: infos-perso;
+    animation-duration: 1s;
+    transition: 1s;
+}
+
+@keyframes infos-perso {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .sections .contenu{
     display: flex;
     justify-content: space-between;
@@ -310,6 +329,8 @@ div.une-col{
     cursor: pointer;
     margin-bottom: 20px;
 }
+
+
 
 h1#download-cv a{
     background-color: var(--color-trait);
@@ -366,6 +387,9 @@ h1#download-cv{
 
 .date{
     color: var(--main-bg);
+}
+.contact-info + div.reseaux{
+    margin: auto;
 }
 
 .container > .send-mail, .container > .contact-info{
@@ -507,13 +531,13 @@ div#profil{
         width: 100%;
     }
     main{
-        height: 100%;
         flex-grow: 1;
         overflow: auto;
         border-radius: 20px;
         width: 90%;
         margin: 20px auto;
-        height: 85vb;
+        height: 90%;
+        position: relative;
     }
 
     .container{
@@ -557,7 +581,7 @@ div#profil{
     }
 
     div.mon-nom h1{
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     .sections .contenu{
@@ -589,5 +613,17 @@ div#profil{
 
     #acceuil .infos > p:last-child a{
         font-size: 16px;
+    }
+
+    div.tell{
+        width: 90%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        height: 6px;
+        background-color: var(--color-trait);
+        position: sticky;
+        z-index: 999;
+        top: 0;
+        left: 5%;
     }
 }

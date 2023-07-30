@@ -99,8 +99,19 @@ function createForm() {
     }
 }
 
+function createSocialMedia(){
+    const reseaux_clone = document.querySelector(".reseaux").cloneNode(true)
+    let iframes = document.querySelectorAll("iframe")
+    iframes.forEach(
+        (target) => {
+            target.parentNode.replaceChild(reseaux_clone, target)
+        }
+    )
+}
+
 createForm()
 obsetvateur()
+createSocialMedia()
 
 function entouree(){
     const menu_items = document.querySelector('nav-item')
