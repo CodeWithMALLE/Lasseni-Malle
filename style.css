@@ -626,4 +626,7 @@ div#profil{
         top: 0;
         left: 5%;
     }
+    h1#download-cv{
+        font-size: 1em;
+    }
 }
